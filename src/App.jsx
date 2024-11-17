@@ -15,6 +15,9 @@ const App = () => {
     noteService
       .getAll()
       .then(initialNotes => {
+        console.log("Fetched notes:", initialNotes); // Verifica el tipo de dato
+        console.log("Type of fetched notes:", typeof initialNotes);
+        console.log("Is initialNotes an array?", Array.isArray(initialNotes));
         setNotes(initialNotes)
       })
   }, [])
